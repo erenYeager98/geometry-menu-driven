@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Perimeter {
-    public static void main(String[] args) {
+    public void Calculate() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Choose an option:");
         System.out.println("1. Circle");
