@@ -1,32 +1,42 @@
-class Volume {
-    private double length;
-    private double width;
-    private double height;
+import java.util.Scanner;
 
-    public Volume(double length, double width, double height) {
-        this.length = length;
-        this.width = width;
-        this.height = height;
-    }
+public class Volume {
+    public void Calculate() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Choose an option:");
+        System.out.println("1. Sphere");
+        System.out.println("2. Cube");
+        System.out.println("3. Cylinder");
+        System.out.println("Enter your choice: ");
+        int choice = scanner.nextInt();
 
-    public double calculateVolume_rectangle() {
-        return length * width * height;
-    }
+        switch (choice) {
+            case 1:
+                System.out.print("Enter the radius of the sphere: ");
+                double radius = scanner.nextDouble();
+                double sphereVolume = (4.0 / 3.0) * Math.PI * Math.pow(radius, 3);
+                System.out.println("Volume of the sphere: " + sphereVolume);
+                break;
 
-    public double caluculateVolume_cylinder() {
-        return Math.PI * Math.pow(length / 2, 2) * height;
-    }
+            case 2:
+                System.out.print("Enter the side length of the cube: ");
+                double side = scanner.nextDouble();
+                double cubeVolume = Math.pow(side, 3);
+                System.out.println("Volume of the cube: " + cubeVolume);
+                break;
 
-    public double calculateVolume_sphere() {
-        return (4.0 / 3.0) * Math.PI * Math.pow(length / 2, 3);
-    }
-    public double calculateVolume_cone() {
-        return (1.0 / 3.0) * Math.PI * Math.pow(length / 2, 2) * height;
-    } 
-    public double calculateVolume_cube() {
-        return Math.pow(length, 3);
-    }
-    public double calculateVolume_cuboid() {
-        return length * width * height;
+            case 3:
+                System.out.print("Enter the radius and height of the cylinder: ");
+                double cylRadius = scanner.nextDouble();
+                double height = scanner.nextDouble();
+                double cylinderVolume = Math.PI * Math.pow(cylRadius, 2) * height;
+                System.out.println("Volume of the cylinder: " + cylinderVolume);
+                break;
+
+            default:
+                System.out.println("Invalid choice!");
+        }
+
+        scanner.close();
     }
 }
