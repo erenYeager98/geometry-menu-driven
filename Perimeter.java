@@ -20,16 +20,20 @@ public class Perimeter {
 
             case 2:
                 System.out.print("Enter the three sides of the triangle: ");
+                System.out.print("Enter the First Side: ");                
                 double side1 = scanner.nextDouble();
+                System.out.print("Enter the Second Side: ");
                 double side2 = scanner.nextDouble();
+                System.out.print("Enter the Third Side: ");
                 double side3 = scanner.nextDouble();
                 double trianglePerimeter = side1 + side2 + side3;
                 System.out.println("Perimeter of the triangle: " + trianglePerimeter);
                 break;
 
             case 3:
-                System.out.print("Enter the length and width of the rectangle: ");
+                System.out.print("Enter the length of the rectangle: ");
                 double length = scanner.nextDouble();
+                System.out.print("Enter the width of the rectangle: ");
                 double width = scanner.nextDouble();
                 double rectanglePerimeter = 2 * (length + width);
                 System.out.println("Perimeter of the rectangle: " + rectanglePerimeter);
